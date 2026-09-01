@@ -1,0 +1,193 @@
+<!-- Output: html -->
+<!-- File: media.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="放課後アンサンブルの楽曲、写真集、映像作品などのリリース情報。"
+    >
+
+    <title>MEDIA | 放課後アンサンブル</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+
+<body data-page="media" data-root=".">
+    <a class="skip-link" href="#main-content">本文へ移動</a>
+
+    <header class="site-header" data-site-header></header>
+
+    <main id="main-content">
+        <section class="page-hero page-hero--media">
+            <div class="container">
+                <p class="eyebrow">DISCOGRAPHY & PRODUCTS</p>
+                <h1>MEDIA</h1>
+                <p>5人の音楽と物語を、あなたの放課後へ。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="filter-buttons" data-filter-buttons>
+                    <button
+                        class="is-active"
+                        type="button"
+                        data-filter="all"
+                        aria-pressed="true"
+                    >
+                        ALL
+                    </button>
+                    <button
+                        type="button"
+                        data-filter="music"
+                        aria-pressed="false"
+                    >
+                        MUSIC
+                    </button>
+                    <button
+                        type="button"
+                        data-filter="book"
+                        aria-pressed="false"
+                    >
+                        BOOK
+                    </button>
+                    <button
+                        type="button"
+                        data-filter="video"
+                        aria-pressed="false"
+                    >
+                        VIDEO
+                    </button>
+                </div>
+
+                <div class="product-grid">
+                    <article class="product-card" data-category="music">
+                        <a
+                            class="product-card__image image-frame"
+                            href="media-chime.html"
+                        >
+                            <img
+                                src="assets/images/media-chime-cover.webp"
+                                data-fallback
+                                alt="『チャイムが鳴る前に』ジャケット写真"
+                            >
+                            <span class="product-card__type">1st SINGLE</span>
+                        </a>
+
+                        <div class="product-card__body">
+                            <p class="product-card__date">
+                                2026.10.14 RELEASE
+                            </p>
+                            <h2>
+                                <a href="media-chime.html">
+                                    チャイムが鳴る前に
+                                </a>
+                            </h2>
+                            <p class="product-card__price">
+                                通常盤 ¥1,300（税込）<br>
+                                初回限定盤 ¥2,400（税込）
+                            </p>
+
+                            <div class="button-row">
+                                <a class="button" href="media-chime.html">
+                                    詳細
+                                </a>
+                                <a
+                                    class="button button--outline"
+                                    href="maintenance.html"
+                                >
+                                    購入
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="book">
+                        <a
+                            class="product-card__image image-frame"
+                            href="maintenance.html"
+                        >
+                            <img
+                                src="assets/images/media-photobook.webp"
+                                data-fallback
+                                alt="放課後アンサンブル公式写真集の表紙"
+                                loading="lazy"
+                            >
+                            <span class="product-card__type">PHOTO BOOK</span>
+                        </a>
+
+                        <div class="product-card__body">
+                            <p class="product-card__date">
+                                2027.02.10 RELEASE
+                            </p>
+                            <h2>
+                                <a href="maintenance.html">
+                                    放課後の途中
+                                </a>
+                            </h2>
+                            <p class="product-card__price">
+                                A4判・128ページ<br>
+                                ¥3,300（税込）
+                            </p>
+
+                            <div class="button-row">
+                                <a
+                                    class="button button--disabled"
+                                    href="maintenance.html"
+                                >
+                                    COMING SOON
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-category="video">
+                        <a
+                            class="product-card__image image-frame"
+                            href="maintenance.html"
+                        >
+                            <img
+                                src="assets/images/media-live-bluray.webp"
+                                data-fallback
+                                alt="デビューライブ映像作品のジャケット"
+                                loading="lazy"
+                            >
+                            <span class="product-card__type">BLU-RAY</span>
+                        </a>
+
+                        <div class="product-card__body">
+                            <p class="product-card__date">
+                                RELEASE DATE TBA
+                            </p>
+                            <h2>
+                                <a href="maintenance.html">
+                                    はじめての放課後
+                                </a>
+                            </h2>
+                            <p class="product-card__price">
+                                デビューライブ完全収録<br>
+                                価格未定
+                            </p>
+
+                            <div class="button-row">
+                                <a
+                                    class="button button--disabled"
+                                    href="maintenance.html"
+                                >
+                                    COMING SOON
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+</body>
+</html>

@@ -1,193 +1,88 @@
 <!-- Output: html -->
 <!-- File: media.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="放課後アンサンブルの楽曲、写真集、映像作品などのリリース情報。"
-    >
-
-    <title>MEDIA | 放課後アンサンブル</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="放課後アンサンブルの音楽、映像、写真集などのリリース情報。"
+  >
+  <title>メディア｜放課後アンサンブル</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/site.js" data-base="." defer></script>
 </head>
 
-<body data-page="media" data-root=".">
-    <a class="skip-link" href="#main-content">本文へ移動</a>
+<body data-page="media">
+  <div data-site-header></div>
 
-    <header class="site-header" data-site-header></header>
+  <main class="site-main">
+    <header class="page-header">
+      <div class="site-container">
+        <span class="page-header__eyebrow">Media</span>
+        <h1>メディア</h1>
+        <p>
+          シングル、ミュージックビデオ、写真集など、
+          放課後アンサンブルの作品をご紹介します。
+        </p>
+      </div>
+    </header>
 
-    <main id="main-content">
-        <section class="page-hero page-hero--media">
-            <div class="container">
-                <p class="eyebrow">DISCOGRAPHY & PRODUCTS</p>
-                <h1>MEDIA</h1>
-                <p>5人の音楽と物語を、あなたの放課後へ。</p>
+    <section class="section">
+      <div class="site-container media-grid">
+        <article class="content-card">
+          <a href="./media/chime-before-it-rings.html">
+            <div class="content-card__image">
+              <img
+                src="./assets/images/media/debut-single-cover.webp"
+                alt="デビューシングル「チャイムが鳴る前に」のジャケット"
+              >
+              <span class="content-card__badge">SINGLE</span>
             </div>
-        </section>
 
-        <section class="section">
-            <div class="container">
-                <div class="filter-buttons" data-filter-buttons>
-                    <button
-                        class="is-active"
-                        type="button"
-                        data-filter="all"
-                        aria-pressed="true"
-                    >
-                        ALL
-                    </button>
-                    <button
-                        type="button"
-                        data-filter="music"
-                        aria-pressed="false"
-                    >
-                        MUSIC
-                    </button>
-                    <button
-                        type="button"
-                        data-filter="book"
-                        aria-pressed="false"
-                    >
-                        BOOK
-                    </button>
-                    <button
-                        type="button"
-                        data-filter="video"
-                        aria-pressed="false"
-                    >
-                        VIDEO
-                    </button>
-                </div>
-
-                <div class="product-grid">
-                    <article class="product-card" data-category="music">
-                        <a
-                            class="product-card__image image-frame"
-                            href="media-chime.html"
-                        >
-                            <img
-                                src="assets/images/media-chime-cover.webp"
-                                data-fallback
-                                alt="『チャイムが鳴る前に』ジャケット写真"
-                            >
-                            <span class="product-card__type">1st SINGLE</span>
-                        </a>
-
-                        <div class="product-card__body">
-                            <p class="product-card__date">
-                                2026.10.14 RELEASE
-                            </p>
-                            <h2>
-                                <a href="media-chime.html">
-                                    チャイムが鳴る前に
-                                </a>
-                            </h2>
-                            <p class="product-card__price">
-                                通常盤 ¥1,300（税込）<br>
-                                初回限定盤 ¥2,400（税込）
-                            </p>
-
-                            <div class="button-row">
-                                <a class="button" href="media-chime.html">
-                                    詳細
-                                </a>
-                                <a
-                                    class="button button--outline"
-                                    href="maintenance.html"
-                                >
-                                    購入
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="product-card" data-category="book">
-                        <a
-                            class="product-card__image image-frame"
-                            href="maintenance.html"
-                        >
-                            <img
-                                src="assets/images/media-photobook.webp"
-                                data-fallback
-                                alt="放課後アンサンブル公式写真集の表紙"
-                                loading="lazy"
-                            >
-                            <span class="product-card__type">PHOTO BOOK</span>
-                        </a>
-
-                        <div class="product-card__body">
-                            <p class="product-card__date">
-                                2027.02.10 RELEASE
-                            </p>
-                            <h2>
-                                <a href="maintenance.html">
-                                    放課後の途中
-                                </a>
-                            </h2>
-                            <p class="product-card__price">
-                                A4判・128ページ<br>
-                                ¥3,300（税込）
-                            </p>
-
-                            <div class="button-row">
-                                <a
-                                    class="button button--disabled"
-                                    href="maintenance.html"
-                                >
-                                    COMING SOON
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="product-card" data-category="video">
-                        <a
-                            class="product-card__image image-frame"
-                            href="maintenance.html"
-                        >
-                            <img
-                                src="assets/images/media-live-bluray.webp"
-                                data-fallback
-                                alt="デビューライブ映像作品のジャケット"
-                                loading="lazy"
-                            >
-                            <span class="product-card__type">BLU-RAY</span>
-                        </a>
-
-                        <div class="product-card__body">
-                            <p class="product-card__date">
-                                RELEASE DATE TBA
-                            </p>
-                            <h2>
-                                <a href="maintenance.html">
-                                    はじめての放課後
-                                </a>
-                            </h2>
-                            <p class="product-card__price">
-                                デビューライブ完全収録<br>
-                                価格未定
-                            </p>
-
-                            <div class="button-row">
-                                <a
-                                    class="button button--disabled"
-                                    href="maintenance.html"
-                                >
-                                    COMING SOON
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+            <div class="content-card__body">
+              <div class="content-card__meta">
+                <span>2026.10.14</span>
+                <span>¥1,650（税込）</span>
+              </div>
+              <h2>チャイムが鳴る前に</h2>
+              <p>
+                5人の始まりを描く、疾走感あふれる
+                青春ポップロック・デビューシングル。
+              </p>
             </div>
-        </section>
-    </main>
+          </a>
+        </article>
 
-    <footer class="site-footer" data-site-footer></footer>
+        <article class="content-card">
+          <a href="./media/hiyori-photobook.html">
+            <div class="content-card__image">
+              <img
+                src="./assets/images/media/hiyori-photobook-cover.webp"
+                alt="桜庭ひよりファースト写真集の表紙"
+                loading="lazy"
+              >
+              <span class="content-card__badge">PHOTOBOOK</span>
+            </div>
+
+            <div class="content-card__body">
+              <div class="content-card__meta">
+                <span>2027.04.12</span>
+                <span>¥3,300（税込）</span>
+              </div>
+              <h2>桜庭ひより 1st写真集「春のとなり」</h2>
+              <p>
+                日常の延長にある自然な表情を収録した、
+                桜庭ひより初のソロ写真集。
+              </p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
 </body>
 </html>

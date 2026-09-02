@@ -1270,3 +1270,18 @@ a:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+/* File: assets/css/style.css */
+
+@media (max-width: 700px) {
+  .hero-slide:nth-child(1) .hero-slide__image {
+    object-position: 52% top;
+  }
+
+  .hero-slide:nth-child(2) .hero-slide__image {
+    object-position: 48% top;
+  }
+
+  .hero-slide:nth-child(3) .hero-slide__image {
+    object-position: 50% top;
+  }
+}

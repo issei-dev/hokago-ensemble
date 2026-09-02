@@ -4,54 +4,139 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+
   <meta
     name="description"
-    content="放課後アンサンブルの5人のメンバープロフィール。"
+    content="放課後アンサンブルのメンバープロフィール。桜庭ひより、水瀬つむぎ、日向こはる、白石れいな、橘まどかを紹介します。"
   >
+
+  <meta name="theme-color" content="#fffdf8">
+
   <title>メンバー｜放課後アンサンブル</title>
+
   <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/site.js" data-base="." defer></script>
+
+  <script
+    src="./assets/js/site.js"
+    data-base="."
+    defer
+  ></script>
 </head>
 
 <body data-page="members">
+  <a class="skip-link" href="#main-content">
+    本文へ移動
+  </a>
+
   <div data-site-header></div>
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     <header class="page-header">
       <div class="site-container">
-        <span class="page-header__eyebrow">Members</span>
+        <span class="page-header__eyebrow">
+          MEMBERS
+        </span>
+
         <h1>メンバー</h1>
+
         <p>
-          性格も声も歩幅も違う5人。
-          それぞれの個性が重なって、放課後アンサンブルになります。
+          性格も、声も、歩幅も違う5人。
+          それぞれの個性が重なって、
+          放課後アンサンブルになります。
         </p>
       </div>
     </header>
 
-    <section class="section">
+    <nav class="member-index" aria-label="メンバー一覧">
+      <div class="site-container member-index__inner">
+        <a href="#hiyori">
+          <span
+            class="member-index__color"
+            style="--member-color: #ef7f79;"
+            aria-hidden="true"
+          ></span>
+          桜庭ひより
+        </a>
+
+        <a href="#tsumugi">
+          <span
+            class="member-index__color"
+            style="--member-color: #73bdd0;"
+            aria-hidden="true"
+          ></span>
+          水瀬つむぎ
+        </a>
+
+        <a href="#koharu">
+          <span
+            class="member-index__color"
+            style="--member-color: #edc74a;"
+            aria-hidden="true"
+          ></span>
+          日向こはる
+        </a>
+
+        <a href="#reina">
+          <span
+            class="member-index__color"
+            style="--member-color: #9277b8;"
+            aria-hidden="true"
+          ></span>
+          白石れいな
+        </a>
+
+        <a href="#madoka">
+          <span
+            class="member-index__color"
+            style="--member-color: #72af80;"
+            aria-hidden="true"
+          ></span>
+          橘まどか
+        </a>
+      </div>
+    </nav>
+
+    <section class="section member-list-section">
       <div class="site-container member-list">
         <article
           id="hiyori"
           class="member-card"
-          style="--member-color: var$--color-coral$;"
+          style="--member-color: #ef7f79;"
         >
           <div class="member-card__visual">
             <img
-              src="./assets/images/members/hiyori-hero.jpg"
-              alt="桜庭ひよりの公式全身ビジュアル"
+              src="./assets/images/members/hiyori-hero.webp"
+              alt="桜庭ひよりの公式アーティスト写真"
+              width="1200"
+              height="1600"
+              decoding="async"
+              fetchpriority="high"
             >
-            <span class="member-card__number">01</span>
+
+            <span class="member-card__number" aria-hidden="true">
+              01
+            </span>
+
+            <span class="member-card__color-name">
+              CORAL PINK
+            </span>
           </div>
 
           <div class="member-card__body">
-            <span class="member-card__role">
+            <p class="member-card__role">
               CENTER / MAIN VOCAL
-            </span>
+            </p>
+
             <h2>桜庭ひより</h2>
-            <span class="member-card__reading">
+
+            <p class="member-card__reading">
               SAKURABA HIYORI
-            </span>
+            </p>
 
             <p class="member-card__catchphrase">
               「あなたの放課後に、春みたいな笑顔を届けます！」
@@ -62,33 +147,48 @@
                 <dt>年齢</dt>
                 <dd>21歳</dd>
               </div>
+
               <div>
                 <dt>身長</dt>
                 <dd>158cm</dd>
               </div>
+
               <div>
-                <dt>メンバーカラー</dt>
-                <dd>コーラルピンク</dd>
+                <dt>出身地</dt>
+                <dd>埼玉県</dd>
               </div>
+
               <div>
                 <dt>愛称</dt>
                 <dd>ひよりん</dd>
               </div>
+
+              <div>
+                <dt>メンバーカラー</dt>
+                <dd>コーラルピンク</dd>
+              </div>
+
+              <div>
+                <dt>ポジション</dt>
+                <dd>センター／メインボーカル</dd>
+              </div>
+
               <div>
                 <dt>趣味</dt>
-                <dd>カフェ巡り、手帳デコ</dd>
+                <dd>カフェ巡り、手帳のデコレーション</dd>
               </div>
+
               <div>
                 <dt>特技</dt>
-                <dd>初対面でも自然に話せる</dd>
+                <dd>初対面でも自然に話せること</dd>
               </div>
             </dl>
 
             <p class="member-card__description">
-              明るく親しみやすい王道センター。
+              明るく親しみやすい、グループの王道センター。
               誰に対しても自然体で接し、緊張した場の空気を
               柔らかくできる。少し慌て者だが、
-              ステージでは観客一人ひとりへ歌を届ける。
+              ステージでは一人ひとりへ歌詞を届けるように歌う。
             </p>
           </div>
         </article>
@@ -96,25 +196,37 @@
         <article
           id="tsumugi"
           class="member-card"
-          style="--member-color: var$--color-aqua$;"
+          style="--member-color: #73bdd0;"
         >
           <div class="member-card__visual">
             <img
               src="./assets/images/members/tsumugi-hero.webp"
-              alt="水瀬つむぎの公式全身ビジュアル"
+              alt="水瀬つむぎの公式アーティスト写真"
+              width="1200"
+              height="1600"
               loading="lazy"
+              decoding="async"
             >
-            <span class="member-card__number">02</span>
+
+            <span class="member-card__number" aria-hidden="true">
+              02
+            </span>
+
+            <span class="member-card__color-name">
+              AQUA BLUE
+            </span>
           </div>
 
           <div class="member-card__body">
-            <span class="member-card__role">
+            <p class="member-card__role">
               LEADER / SUB VOCAL
-            </span>
+            </p>
+
             <h2>水瀬つむぎ</h2>
-            <span class="member-card__reading">
+
+            <p class="member-card__reading">
               MINASE TSUMUGI
-            </span>
+            </p>
 
             <p class="member-card__catchphrase">
               「一つずつ、私たちらしい答えを見つけよう。」
@@ -125,22 +237,37 @@
                 <dt>年齢</dt>
                 <dd>22歳</dd>
               </div>
+
               <div>
                 <dt>身長</dt>
                 <dd>165cm</dd>
               </div>
+
               <div>
-                <dt>メンバーカラー</dt>
-                <dd>アクアブルー</dd>
+                <dt>出身地</dt>
+                <dd>東京都</dd>
               </div>
+
               <div>
                 <dt>愛称</dt>
                 <dd>つむちゃん</dd>
               </div>
+
+              <div>
+                <dt>メンバーカラー</dt>
+                <dd>アクアブルー</dd>
+              </div>
+
+              <div>
+                <dt>ポジション</dt>
+                <dd>リーダー／サブボーカル</dd>
+              </div>
+
               <div>
                 <dt>趣味</dt>
                 <dd>読書、古い喫茶店巡り</dd>
               </div>
+
               <div>
                 <dt>特技</dt>
                 <dd>記憶力、情報整理</dd>
@@ -149,7 +276,8 @@
 
             <p class="member-card__description">
               知的で穏やかな最年長リーダー。
-              メンバーの意見を丁寧に聞き、進むべき方向を整理する。
+              メンバーの意見を丁寧に聞き、
+              進むべき方向を分かりやすく整理する。
               冷静に見えるが、笑いのツボに入ると
               なかなか止まらない一面もある。
             </p>
@@ -159,25 +287,37 @@
         <article
           id="koharu"
           class="member-card"
-          style="--member-color: var$--color-yellow$;"
+          style="--member-color: #edc74a;"
         >
           <div class="member-card__visual">
             <img
               src="./assets/images/members/koharu-hero.webp"
-              alt="日向こはるの公式全身ビジュアル"
+              alt="日向こはるの公式アーティスト写真"
+              width="1200"
+              height="1600"
               loading="lazy"
+              decoding="async"
             >
-            <span class="member-card__number">03</span>
+
+            <span class="member-card__number" aria-hidden="true">
+              03
+            </span>
+
+            <span class="member-card__color-name">
+              SUNFLOWER YELLOW
+            </span>
           </div>
 
           <div class="member-card__body">
-            <span class="member-card__role">
+            <p class="member-card__role">
               DANCE / MOOD MAKER
-            </span>
+            </p>
+
             <h2>日向こはる</h2>
-            <span class="member-card__reading">
+
+            <p class="member-card__reading">
               HINATA KOHARU
-            </span>
+            </p>
 
             <p class="member-card__catchphrase">
               「それ、絶対おもしろいやつ！」
@@ -188,22 +328,37 @@
                 <dt>年齢</dt>
                 <dd>20歳</dd>
               </div>
+
               <div>
                 <dt>身長</dt>
                 <dd>153cm</dd>
               </div>
+
               <div>
-                <dt>メンバーカラー</dt>
-                <dd>サンフラワーイエロー</dd>
+                <dt>出身地</dt>
+                <dd>神奈川県</dd>
               </div>
+
               <div>
                 <dt>愛称</dt>
                 <dd>こはるん</dd>
               </div>
+
+              <div>
+                <dt>メンバーカラー</dt>
+                <dd>サンフラワーイエロー</dd>
+              </div>
+
+              <div>
+                <dt>ポジション</dt>
+                <dd>ダンス／ムードメーカー</dd>
+              </div>
+
               <div>
                 <dt>趣味</dt>
                 <dd>ダンス動画、駄菓子屋巡り</dd>
               </div>
+
               <div>
                 <dt>特技</dt>
                 <dd>即興ダンス、短距離走</dd>
@@ -212,7 +367,8 @@
 
             <p class="member-card__description">
               小柄で活発なムードメーカー。
-              表情豊かなリアクションと躍動感のあるダンスが魅力。
+              表情豊かなリアクションと、
+              躍動感のあるダンスが魅力。
               いつも元気に見えるが、できないことは
               人知れず練習して克服する努力家。
             </p>
@@ -222,25 +378,37 @@
         <article
           id="reina"
           class="member-card"
-          style="--member-color: var$--color-purple$;"
+          style="--member-color: #9277b8;"
         >
           <div class="member-card__visual">
             <img
               src="./assets/images/members/reina-hero.webp"
-              alt="白石れいなの公式全身ビジュアル"
+              alt="白石れいなの公式アーティスト写真"
+              width="1200"
+              height="1600"
               loading="lazy"
+              decoding="async"
             >
-            <span class="member-card__number">04</span>
+
+            <span class="member-card__number" aria-hidden="true">
+              04
+            </span>
+
+            <span class="member-card__color-name">
+              ROYAL PURPLE
+            </span>
           </div>
 
           <div class="member-card__body">
-            <span class="member-card__role">
+            <p class="member-card__role">
               VISUAL / LOW VOCAL
-            </span>
+            </p>
+
             <h2>白石れいな</h2>
-            <span class="member-card__reading">
+
+            <p class="member-card__reading">
               SHIRAISHI REINA
-            </span>
+            </p>
 
             <p class="member-card__catchphrase">
               「静かな時間も、私たちの音楽にしたい。」
@@ -251,22 +419,37 @@
                 <dt>年齢</dt>
                 <dd>22歳</dd>
               </div>
+
               <div>
                 <dt>身長</dt>
                 <dd>168cm</dd>
               </div>
+
               <div>
-                <dt>メンバーカラー</dt>
-                <dd>ロイヤルパープル</dd>
+                <dt>出身地</dt>
+                <dd>千葉県</dd>
               </div>
+
               <div>
                 <dt>愛称</dt>
                 <dd>れいな</dd>
               </div>
+
+              <div>
+                <dt>メンバーカラー</dt>
+                <dd>ロイヤルパープル</dd>
+              </div>
+
+              <div>
+                <dt>ポジション</dt>
+                <dd>ビジュアル／低音ボーカル</dd>
+              </div>
+
               <div>
                 <dt>趣味</dt>
                 <dd>写真、香水、絵画</dd>
               </div>
+
               <div>
                 <dt>特技</dt>
                 <dd>衣装補修、デッサン</dd>
@@ -285,25 +468,37 @@
         <article
           id="madoka"
           class="member-card"
-          style="--member-color: var$--color-green$;"
+          style="--member-color: #72af80;"
         >
           <div class="member-card__visual">
             <img
               src="./assets/images/members/madoka-hero.webp"
-              alt="橘まどかの公式全身ビジュアル"
+              alt="橘まどかの公式アーティスト写真"
+              width="1200"
+              height="1600"
               loading="lazy"
+              decoding="async"
             >
-            <span class="member-card__number">05</span>
+
+            <span class="member-card__number" aria-hidden="true">
+              05
+            </span>
+
+            <span class="member-card__color-name">
+              FRESH GREEN
+            </span>
           </div>
 
           <div class="member-card__body">
-            <span class="member-card__role">
+            <p class="member-card__role">
               VARIETY / HARMONY
-            </span>
+            </p>
+
             <h2>橘まどか</h2>
-            <span class="member-card__reading">
+
+            <p class="member-card__reading">
               TACHIBANA MADOKA
-            </span>
+            </p>
 
             <p class="member-card__catchphrase">
               「ただいま脳内会議中です！」
@@ -314,22 +509,37 @@
                 <dt>年齢</dt>
                 <dd>21歳</dd>
               </div>
+
               <div>
                 <dt>身長</dt>
                 <dd>160cm</dd>
               </div>
+
               <div>
-                <dt>メンバーカラー</dt>
-                <dd>フレッシュグリーン</dd>
+                <dt>出身地</dt>
+                <dd>群馬県</dd>
               </div>
+
               <div>
                 <dt>愛称</dt>
                 <dd>まどちゃん</dd>
               </div>
+
+              <div>
+                <dt>メンバーカラー</dt>
+                <dd>フレッシュグリーン</dd>
+              </div>
+
+              <div>
+                <dt>ポジション</dt>
+                <dd>バラエティ／ハーモニー</dd>
+              </div>
+
               <div>
                 <dt>趣味</dt>
                 <dd>ラジオ、ものまね、料理</dd>
               </div>
+
               <div>
                 <dt>特技</dt>
                 <dd>即興MC、声色の使い分け</dd>
@@ -338,7 +548,7 @@
 
             <p class="member-card__description">
               親しみやすく表情豊かなバラエティ担当。
-              独特な言葉選びと間で、自然に笑いを生み出す。
+              独特な言葉選びと間で自然に笑いを生み出す。
               人の長所を見つけるのが得意で、
               5人の会話をつなぐ橋渡し役でもある。
             </p>

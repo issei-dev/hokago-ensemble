@@ -1,163 +1,134 @@
 <!-- Output: html -->
 <!-- File: events.html -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta
-        name="description"
-        content="放課後アンサンブルのライブ、リリースイベント、出演予定、イベントアーカイブ。"
-    >
-
-    <title>EVENT | 放課後アンサンブル</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/main.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="放課後アンサンブルのライブ、発売記念イベント、出演情報。"
+  >
+  <title>イベント｜放課後アンサンブル</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="./assets/js/site.js" data-base="." defer></script>
 </head>
 
-<body data-page="events" data-root=".">
-    <a class="skip-link" href="#main-content">本文へ移動</a>
+<body data-page="events">
+  <div data-site-header></div>
 
-    <header class="site-header" data-site-header></header>
+  <main class="site-main">
+    <header class="page-header">
+      <div class="site-container">
+        <span class="page-header__eyebrow">Events</span>
+        <h1>イベント</h1>
+        <p>
+          これから開催されるライブやリリースイベントと、
+          過去の活動記録を掲載します。
+        </p>
+      </div>
+    </header>
 
-    <main id="main-content">
-        <section class="page-hero page-hero--events">
-            <div class="container">
-                <p class="eyebrow">LIVE & SCHEDULE</p>
-                <h1>EVENT</h1>
-                <p>5人と一緒に、忘れられない放課後を。</p>
-            </div>
-        </section>
+    <section class="section">
+      <div class="site-container">
+        <div class="section-heading">
+          <div>
+            <span class="section-heading__eyebrow">Upcoming</span>
+            <h2>開催予定</h2>
+          </div>
+        </div>
 
-        <section class="section">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">UPCOMING</p>
-                    <h2>これからのイベント</h2>
+        <div class="event-grid">
+          <article class="content-card">
+            <a href="./events/debut-live.html">
+              <div class="content-card__image">
+                <img
+                  src="./assets/images/events/debut-live-main.webp"
+                  alt="はじめてのホームルームのイベントビジュアル"
+                >
+                <span class="content-card__badge">2026.11.08</span>
+              </div>
+
+              <div class="content-card__body">
+                <div class="content-card__meta">
+                  <span>単独ライブ</span>
+                  <span>開場 16:00／開演 17:00</span>
                 </div>
+                <h2>はじめてのホームルーム</h2>
+                <p>
+                  デビューシングルの楽曲を中心に披露する、
+                  放課後アンサンブル初の単独ライブ。
+                </p>
+              </div>
+            </a>
+          </article>
 
-                <div class="event-list">
-                    <article class="event-row">
-                        <a class="event-row__image image-frame" href="maintenance.html">
-                            <img
-                                src="assets/images/event-release.webp"
-                                data-fallback
-                                alt="発売記念ミニライブの告知画像"
-                            >
-                        </a>
+          <article class="content-card">
+            <a href="./events/release-event.html">
+              <div class="content-card__image">
+                <img
+                  src="./assets/images/events/release-event-main.webp"
+                  alt="デビューシングル発売記念イベントのビジュアル"
+                  loading="lazy"
+                >
+                <span class="content-card__badge">2026.10.18</span>
+              </div>
 
-                        <div class="event-row__date">
-                            <span>OCT</span>
-                            <strong>17</strong>
-                            <small>2026</small>
-                        </div>
-
-                        <div class="event-row__body">
-                            <div class="event-row__meta">
-                                <span class="status-badge status-badge--upcoming">
-                                    UPCOMING
-                                </span>
-                                <span>東京都内・特設会場</span>
-                            </div>
-
-                            <h3>発売記念ミニライブ＆トーク</h3>
-
-                            <p>
-                                デビューシングル『チャイムが鳴る前に』発売を
-                                記念したミニライブ。5人によるトークセッションも実施します。
-                            </p>
-
-                            <a class="text-link" href="maintenance.html">
-                                詳細は後日発表
-                            </a>
-                        </div>
-                    </article>
-
-                    <article class="event-row">
-                        <a class="event-row__image image-frame" href="maintenance.html">
-                            <img
-                                src="assets/images/event-festival.webp"
-                                data-fallback
-                                alt="秋のアイドルフェス出演告知画像"
-                                loading="lazy"
-                            >
-                        </a>
-
-                        <div class="event-row__date">
-                            <span>NOV</span>
-                            <strong>03</strong>
-                            <small>2026</small>
-                        </div>
-
-                        <div class="event-row__body">
-                            <div class="event-row__meta">
-                                <span class="status-badge status-badge--upcoming">
-                                    UPCOMING
-                                </span>
-                                <span>海浜公園・野外ステージ</span>
-                            </div>
-
-                            <h3>AUTUMN IDOL FEST 2026</h3>
-
-                            <p>
-                                放課後アンサンブル初の大型アイドルフェス出演。
-                                デビュー曲を含む全4曲を披露予定です。
-                            </p>
-
-                            <a class="text-link" href="maintenance.html">
-                                詳細は後日発表
-                            </a>
-                        </div>
-                    </article>
+              <div class="content-card__body">
+                <div class="content-card__meta">
+                  <span>発売記念イベント</span>
+                  <span>13:00開始</span>
                 </div>
-            </div>
-        </section>
+                <h2>チャイムが鳴る前に 発売記念イベント</h2>
+                <p>
+                  ミニライブとトークを実施する、
+                  デビューシングル発売記念イベント。
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <section class="section section--tinted">
-            <div class="container">
-                <div class="section-heading">
-                    <p class="eyebrow">ARCHIVE</p>
-                    <h2>過去のイベント</h2>
+    <section class="section section--white">
+      <div class="site-container">
+        <div class="section-heading">
+          <div>
+            <span class="section-heading__eyebrow">Archive</span>
+            <h2>活動記録</h2>
+          </div>
+        </div>
+
+        <div class="event-grid">
+          <article class="content-card">
+            <a href="./events/release-event.html">
+              <div class="content-card__image">
+                <img
+                  src="./assets/images/events/release-event-01.webp"
+                  alt="メンバーお披露目会で挨拶する5人"
+                  loading="lazy"
+                >
+                <span class="content-card__badge">2026.08.15</span>
+              </div>
+
+              <div class="content-card__body">
+                <div class="content-card__meta">
+                  <span>お披露目会</span>
+                  <span>活動開始イベント</span>
                 </div>
+                <h2>放課後アンサンブル メンバーお披露目会</h2>
+                <p>
+                  5人のプロフィールとデビュー曲を初公開しました。
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <div class="card-grid card-grid--three">
-                    <article class="content-card">
-                        <a
-                            class="content-card__image image-frame"
-                            href="event-debut-showcase.html"
-                        >
-                            <img
-                                src="assets/images/event-debut.webp"
-                                data-fallback
-                                alt="デビューお披露目会の集合写真"
-                                loading="lazy"
-                            >
-                            <span class="status-badge status-badge--past">
-                                REPORT
-                            </span>
-                        </a>
-
-                        <div class="content-card__body">
-                            <time datetime="2026-08-08">2026.08.08</time>
-                            <h3>
-                                <a href="event-debut-showcase.html">
-                                    放課後アンサンブル デビューお披露目会
-                                </a>
-                            </h3>
-                            <p>
-                                5人が初めてファンの前に立った記念すべき一日。
-                            </p>
-                            <a class="text-link" href="event-debut-showcase.html">
-                                フォトレポート
-                            </a>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer" data-site-footer></footer>
+  <div data-site-footer></div>
 </body>
 </html>

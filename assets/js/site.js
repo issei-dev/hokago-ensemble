@@ -470,38 +470,6 @@ const initializeImageErrorHandling = () => {
   });
 };
 
-const initializeAnchorNavigation = () => {
-  document
-    .querySelectorAll('a[href^="#"]:not([href="#"])')
-    .forEach((link) => {
-      link.addEventListener("click", (event) => {
-        const target = document.querySelector(
-          link.getAttribute("href")
-        );
-
-        if (!target) {
-          return;
-        }
-
-        event.preventDefault();
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      });
-    });
-};
-
-const initializeSite = () => {
-  ensureViewport();
-  createHeader();
-  createFooter();
-  initializeMenu();
-  initializeSlider();
-  initializeImageModal();
-  initializeImageErrorHandling();
-  initializeAnchorNavigation();
-};
 // File: assets/js/site.js
 
 /**
@@ -553,8 +521,11 @@ const initializeHokaanFilter = () => {
       return;
     }
 
+    const memberName =
+      memberNames[filter] || "選択したメンバー";
+
     result.textContent =
-      `${memberNames[filter]}の写真を` +
+      `${memberName}の写真を` +
       `${visibleCount}枚表示しています`;
   };
 
@@ -566,6 +537,7 @@ const initializeHokaanFilter = () => {
         button.dataset.filter === filter;
 
       button.classList.toggle("is-active", isActive);
+
       button.setAttribute(
         "aria-pressed",
         String(isActive)
@@ -594,14 +566,17 @@ const initializeHokaanFilter = () => {
       return;
     }
 
-    applyFilter(button.dataset.filter || "all");
+    const filter = button.dataset.filter || "all";
+
+    applyFilter(filter);
   });
 
   applyFilter("all");
 };
-initializeSite();
-// File: assets/js/site.js
 
+/**
+ * サイト全体を初期化します。
+ */
 const initializeSite = () => {
   ensureViewport();
   createHeader();

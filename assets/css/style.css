@@ -1556,3 +1556,131 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+/* File: assets/css/style.css */
+
+/* =========================================================
+   Event detail additions
+   ========================================================= */
+
+.detail-list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  list-style: none;
+}
+
+.detail-list li {
+  position: relative;
+  padding: 14px 16px 14px 42px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-small);
+  background: var(--color-white);
+  color: var(--color-ink);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.detail-list li::before {
+  position: absolute;
+  top: 15px;
+  left: 16px;
+  display: grid;
+  width: 18px;
+  height: 18px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--color-white);
+  background: var(--color-coral);
+  content: "✓";
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+
+.sponsor-card {
+  min-width: 0;
+  padding: 22px 20px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-medium);
+  background: var(--color-white);
+  box-shadow: 0 12px 28px var(--color-shadow);
+}
+
+.sponsor-card h3 {
+  margin: 13px 0 10px;
+  color: var(--color-navy);
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.sponsor-card p {
+  margin: 0 0 14px;
+  font-size: 14px;
+}
+
+.sponsor-card small {
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.event-costume-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.event-costume-item {
+  --member-color: var(--color-coral);
+
+  padding: 20px;
+  border: 1px solid var(--color-line);
+  border-left: 6px solid var(--member-color);
+  border-radius: var(--radius-small);
+  background: var(--color-white);
+}
+
+.event-costume-item h3 {
+  margin: 0 0 8px;
+  color: var(--member-color);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.event-costume-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.event-notice {
+  margin-top: 45px;
+  padding: 22px 20px;
+  border: 1px solid #cfe4eb;
+  border-radius: var(--radius-medium);
+  background: #f1fbfe;
+}
+
+.event-notice h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.event-notice p {
+  margin: 0;
+}
+
+@media (min-width: 700px) {
+  .sponsor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .event-costume-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

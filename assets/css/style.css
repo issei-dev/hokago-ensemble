@@ -1282,3 +1282,277 @@ body {
     box-shadow: none;
   }
 }
+/* File: assets/css/style.css */
+
+/* =========================================================
+   #ほかアン
+   ========================================================= */
+
+.hokaan-section {
+  min-height: 70vh;
+}
+
+.hokaan-heading {
+  align-items: flex-end;
+}
+
+.hokaan-filter {
+  display: flex;
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 4px 0 12px;
+  overflow-x: auto;
+  gap: 10px;
+  scrollbar-width: thin;
+  scrollbar-color:
+    var(--color-coral)
+    var(--color-coral-soft);
+}
+
+.hokaan-filter__button {
+  display: inline-flex;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 15px;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-muted);
+  background: var(--color-white);
+  box-shadow: 0 6px 16px rgba(33, 54, 83, 0.06);
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.hokaan-filter__button:hover {
+  border-color: var(--color-coral);
+  color: var(--color-navy);
+  transform: translateY(-1px);
+}
+
+.hokaan-filter__button.is-active {
+  border-color: var(--color-navy);
+  color: var(--color-white);
+  background: var(--color-navy);
+  box-shadow: 0 9px 20px rgba(33, 54, 83, 0.18);
+}
+
+.hokaan-filter__button span {
+  display: inline-grid;
+  min-width: 22px;
+  height: 22px;
+  padding-inline: 5px;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--color-navy);
+  background: var(--color-coral-soft);
+  font-size: 10px;
+}
+
+.hokaan-filter__button.is-active span {
+  color: var(--color-navy);
+  background: var(--color-white);
+}
+
+.hokaan-filter__color {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: var(--filter-color);
+  box-shadow: 0 0 0 1px rgba(33, 54, 83, 0.12);
+}
+
+.hokaan-result {
+  min-height: 30px;
+  margin-bottom: 18px;
+}
+
+.hokaan-result p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.hokaan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+}
+
+.hokaan-card {
+  --member-color: var(--color-coral);
+
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  background: var(--color-white);
+  box-shadow: 0 14px 34px var(--color-shadow);
+  transition:
+    opacity 180ms ease,
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.hokaan-card[hidden] {
+  display: none;
+}
+
+.hokaan-card:hover {
+  box-shadow: 0 20px 42px rgba(33, 54, 83, 0.17);
+  transform: translateY(-4px);
+}
+
+.hokaan-card__button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(
+        in srgb,
+        var(--member-color) 22%,
+        white
+      ),
+      #e8edf2
+    );
+  cursor: zoom-in;
+}
+
+.hokaan-card__button::after {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: var(--color-white);
+  background: rgba(20, 37, 60, 0.7);
+  content: "＋";
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1;
+  opacity: 0;
+  transform: scale(0.85);
+  transition:
+    opacity var(--transition),
+    transform var(--transition);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+}
+
+.hokaan-card:hover .hokaan-card__button::after,
+.hokaan-card__button:focus-visible::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hokaan-card__button img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 500ms ease;
+}
+
+.hokaan-card:hover .hokaan-card__button img {
+  transform: scale(1.035);
+}
+
+.hokaan-card__body {
+  position: relative;
+  min-height: 112px;
+  padding: 18px 17px 20px;
+  border-top: 5px solid var(--member-color);
+}
+
+.hokaan-card__member {
+  display: inline-flex;
+  margin-bottom: 7px;
+  color: var(--member-color);
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+}
+
+.hokaan-card__body p {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: 14px;
+  font-weight: 850;
+  line-height: 1.6;
+}
+
+.hokaan-noscript {
+  margin: 28px 0 0;
+  padding: 17px;
+  border: 1px solid var(--color-line);
+  border-radius: 10px;
+  color: var(--color-muted);
+  background: var(--color-white);
+  font-size: 13px;
+}
+
+/* =========================================================
+   #ほかアン：タブレット
+   ========================================================= */
+
+@media (min-width: 560px) {
+  .hokaan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 760px) {
+  .hokaan-filter {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .hokaan-filter__button {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   #ほかアン：デスクトップ
+   ========================================================= */
+
+@media (min-width: 960px) {
+  .hokaan-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .hokaan-card__body {
+    padding: 19px 19px 22px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .hokaan-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

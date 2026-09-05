@@ -2,47 +2,14 @@
 
 "use strict";
 
-/**
- * HTML内のscriptタグに指定されたdata-baseを取得します。
- *
- * ルート直下のHTML:
- * data-base="."
- *
- * media、eventsディレクトリ内のHTML:
- * data-base=".."
- */
 const getBasePath = () => {
   const script = document.querySelector("script[data-base]");
 
-  if (!script) {
-    return ".";
-  }
-
-  return script.dataset.base || ".";
+  return script?.dataset.base || ".";
 };
 
 const basePath = getBasePath();
 
-/**
- * viewportメタタグが欠落していた場合の保険です。
- * 各HTMLにも直接記載することを推奨します。
- */
-const ensureViewport = () => {
-  let viewport = document.querySelector('meta[name="viewport"]');
-
-  if (!viewport) {
-    viewport = document.createElement("meta");
-    viewport.name = "viewport";
-    document.head.append(viewport);
-  }
-
-  viewport.content =
-    "width=device-width, initial-scale=1, viewport-fit=cover";
-};
-
-/**
- * ナビゲーション定義
- */
 const navigationItems = [
   {
     key: "home",
@@ -66,9 +33,19 @@ const navigationItems = [
   }
 ];
 
-/**
- * 共通ヘッダーを生成します。
- */
+const ensureViewport = () => {
+  let viewport = document.querySelector('meta[name="viewport"]');
+
+  if (!viewport) {
+    viewport = document.createElement("meta");
+    viewport.name = "viewport";
+    document.head.append(viewport);
+  }
+
+  viewport.content =
+    "width=device-width, initial-scale=1, viewport-fit=cover";
+};
+
 const createHeader = () => {
   const target = document.querySelector("[data-site-header]");
 
@@ -99,21 +76,15 @@ const createHeader = () => {
         <a
           class="site-logo"
           href="${basePath}/index.html"
-          aria-label="放課後アンサンブル トップページ"
+          aria-label="放課後アンサンブル トップページへ戻る"
         >
-          <span class="site-logo__mark" aria-hidden="true">
-            放A
-          </span>
-
-          <span class="site-logo__text">
-            <span class="site-logo__main">
-              放課後アンサンブル
-            </span>
-
-            <span class="site-logo__sub">
-              HOKAGO ENSEMBLE
-            </span>
-          </span>
+          <img
+            class="site-logo__image"
+            src="${basePath}/assets/images/common/header-logo.png"
+            alt="放課後アンサンブル"
+            width="80"
+            height="60"
+          >
         </a>
 
         <button
@@ -142,9 +113,6 @@ const createHeader = () => {
   `;
 };
 
-/**
- * 共通フッターを生成します。
- */
 const createFooter = () => {
   const target = document.querySelector("[data-site-footer]");
 
@@ -169,9 +137,19 @@ const createFooter = () => {
       <div class="site-container">
         <div class="site-footer__main">
           <div class="site-footer__brand">
-            <strong>
-              放課後アンサンブル
-            </strong>
+            <a
+              class="site-footer__logo"
+              href="${basePath}/index.html"
+              aria-label="放課後アンサンブル トップページへ戻る"
+            >
+              <img
+                src="${basePath}/assets/images/common/header-logo.png"
+                alt="放課後アンサンブル"
+                width="160"
+                height="120"
+                loading="lazy"
+              >
+            </a>
 
             <p>
               クラスでは普通、ステージでは主役。<br>
@@ -202,9 +180,6 @@ const createFooter = () => {
   `;
 };
 
-/**
- * スマートフォンメニューを制御します。
- */
 const initializeMenu = () => {
   const button = document.querySelector("[data-menu-button]");
   const navigation = document.querySelector("[data-global-nav]");
@@ -220,27 +195,21 @@ const initializeMenu = () => {
     document.body.classList.remove("menu-open");
   };
 
-  const openMenu = () => {
-    navigation.classList.add("is-open");
-    button.setAttribute("aria-expanded", "true");
-    button.setAttribute("aria-label", "メニューを閉じる");
-    document.body.classList.add("menu-open");
-  };
-
   button.addEventListener("click", () => {
-    const isOpen = navigation.classList.contains("is-open");
+    const willOpen =
+      !navigation.classList.contains("is-open");
 
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+    navigation.classList.toggle("is-open", willOpen);
+    button.setAttribute("aria-expanded", String(willOpen));
+    button.setAttribute(
+      "aria-label",
+      willOpen ? "メニューを閉じる" : "メニューを開く"
+    );
+    document.body.classList.toggle("menu-open", willOpen);
   });
 
   navigation.addEventListener("click", (event) => {
-    const link = event.target.closest("a");
-
-    if (link) {
+    if (event.target.closest("a")) {
       closeMenu();
     }
   });
@@ -258,9 +227,6 @@ const initializeMenu = () => {
   });
 };
 
-/**
- * トップページのスライダーを制御します。
- */
 const initializeSlider = () => {
   const slider = document.querySelector("[data-slider]");
 
@@ -271,11 +237,9 @@ const initializeSlider = () => {
   const slides = Array.from(
     slider.querySelectorAll("[data-slide]")
   );
-
   const dotsContainer = slider.querySelector(
     "[data-slider-dots]"
   );
-
   const pauseButton = slider.querySelector(
     "[data-slider-pause]"
   );
@@ -285,7 +249,6 @@ const initializeSlider = () => {
   }
 
   const intervalDuration = 5000;
-
   let currentIndex = 0;
   let intervalId = null;
   let isPaused = false;
@@ -295,16 +258,10 @@ const initializeSlider = () => {
 
     button.type = "button";
     button.className = "hero-slider__dot";
-
     button.setAttribute(
       "aria-label",
       `${index + 1}枚目のスライドを表示`
     );
-
-    button.addEventListener("click", () => {
-      showSlide(index);
-      restartTimer();
-    });
 
     dotsContainer.append(button);
 
@@ -312,20 +269,22 @@ const initializeSlider = () => {
   });
 
   const showSlide = (nextIndex) => {
-    slides[currentIndex].classList.remove("is-active");
-    slides[currentIndex].setAttribute("aria-hidden", "true");
-
-    dots[currentIndex].classList.remove("is-active");
-    dots[currentIndex].removeAttribute("aria-current");
-
     currentIndex =
       (nextIndex + slides.length) % slides.length;
 
-    slides[currentIndex].classList.add("is-active");
-    slides[currentIndex].setAttribute("aria-hidden", "false");
+    slides.forEach((slide, index) => {
+      const isActive = index === currentIndex;
 
-    dots[currentIndex].classList.add("is-active");
-    dots[currentIndex].setAttribute("aria-current", "true");
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+      dots[index].classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        dots[index].setAttribute("aria-current", "true");
+      } else {
+        dots[index].removeAttribute("aria-current");
+      }
+    });
   };
 
   const stopTimer = () => {
@@ -338,38 +297,24 @@ const initializeSlider = () => {
   const startTimer = () => {
     stopTimer();
 
-    if (isPaused) {
-      return;
+    if (!isPaused && slides.length > 1) {
+      intervalId = window.setInterval(() => {
+        showSlide(currentIndex + 1);
+      }, intervalDuration);
     }
-
-    intervalId = window.setInterval(() => {
-      showSlide(currentIndex + 1);
-    }, intervalDuration);
   };
 
-  const restartTimer = () => {
-    startTimer();
-  };
-
-  slides.forEach((slide, index) => {
-    const isFirst = index === 0;
-
-    slide.classList.toggle("is-active", isFirst);
-    slide.setAttribute(
-      "aria-hidden",
-      String(!isFirst)
-    );
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      startTimer();
+    });
   });
-
-  dots[0].classList.add("is-active");
-  dots[0].setAttribute("aria-current", "true");
 
   if (pauseButton) {
     pauseButton.addEventListener("click", () => {
       isPaused = !isPaused;
-
       pauseButton.textContent = isPaused ? "▶" : "Ⅱ";
-
       pauseButton.setAttribute(
         "aria-label",
         isPaused
@@ -386,16 +331,9 @@ const initializeSlider = () => {
   }
 
   slider.addEventListener("mouseenter", stopTimer);
-
-  slider.addEventListener("mouseleave", () => {
-    startTimer();
-  });
-
+  slider.addEventListener("mouseleave", startTimer);
   slider.addEventListener("focusin", stopTimer);
-
-  slider.addEventListener("focusout", () => {
-    startTimer();
-  });
+  slider.addEventListener("focusout", startTimer);
 
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
@@ -405,26 +343,118 @@ const initializeSlider = () => {
     }
   });
 
+  showSlide(0);
   startTimer();
 };
 
-/**
- * 画像の読み込み失敗を検知します。
- *
- * 画像パスが間違っている場合、何も表示されない代わりに
- * CSSでエラーメッセージを表示します。
- */
-const initializeImageErrorHandling = () => {
-  const images = document.querySelectorAll("img");
+const initializeImageModal = () => {
+  const modalImages = document.querySelectorAll(
+    "[data-modal-image]"
+  );
 
-  images.forEach((image) => {
+  if (modalImages.length === 0) {
+    return;
+  }
+
+  const modal = document.createElement("div");
+  modal.className = "image-modal";
+  modal.hidden = true;
+  modal.setAttribute("role", "dialog");
+  modal.setAttribute("aria-modal", "true");
+  modal.setAttribute("aria-label", "画像の拡大表示");
+
+  modal.innerHTML = `
+    <button
+      class="image-modal__backdrop"
+      type="button"
+      aria-label="拡大画像を閉じる"
+      data-modal-close
+    ></button>
+
+    <div class="image-modal__panel">
+      <button
+        class="image-modal__close"
+        type="button"
+        aria-label="拡大画像を閉じる"
+        data-modal-close
+      >
+        ×
+      </button>
+
+      <img
+        class="image-modal__image"
+        src=""
+        alt=""
+      >
+
+      <p class="image-modal__caption"></p>
+    </div>
+  `;
+
+  document.body.append(modal);
+
+  const enlargedImage = modal.querySelector(
+    ".image-modal__image"
+  );
+  const caption = modal.querySelector(
+    ".image-modal__caption"
+  );
+  const closeButton = modal.querySelector(
+    ".image-modal__close"
+  );
+
+  let previouslyFocusedElement = null;
+
+  const closeModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+
+    if (previouslyFocusedElement) {
+      previouslyFocusedElement.focus();
+    }
+  };
+
+  const openModal = (image) => {
+    previouslyFocusedElement = document.activeElement;
+    enlargedImage.src = image.currentSrc || image.src;
+    enlargedImage.alt = image.alt;
+    caption.textContent =
+      image.dataset.modalCaption || image.alt;
+
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    closeButton.focus();
+  };
+
+  modalImages.forEach((image) => {
+    const button = image.closest("button");
+
+    if (!button) {
+      return;
+    }
+
+    button.addEventListener("click", () => {
+      openModal(image);
+    });
+  });
+
+  modal
+    .querySelectorAll("[data-modal-close]")
+    .forEach((button) => {
+      button.addEventListener("click", closeModal);
+    });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) {
+      closeModal();
+    }
+  });
+};
+
+const initializeImageErrorHandling = () => {
+  document.querySelectorAll("img").forEach((image) => {
     const markAsError = () => {
       image.classList.add("image-error");
-
-      console.error(
-        "画像を読み込めませんでした:",
-        image.getAttribute("src")
-      );
     };
 
     image.addEventListener("error", markAsError);
@@ -435,49 +465,35 @@ const initializeImageErrorHandling = () => {
   });
 };
 
-/**
- * ページ内アンカー移動時の位置を調整します。
- */
 const initializeAnchorNavigation = () => {
-  const links = document.querySelectorAll(
-    'a[href^="#"]:not([href="#"])'
-  );
+  document
+    .querySelectorAll('a[href^="#"]:not([href="#"])')
+    .forEach((link) => {
+      link.addEventListener("click", (event) => {
+        const target = document.querySelector(
+          link.getAttribute("href")
+        );
 
-  links.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const href = link.getAttribute("href");
+        if (!target) {
+          return;
+        }
 
-      if (!href) {
-        return;
-      }
-
-      const target = document.querySelector(href);
-
-      if (!target) {
-        return;
-      }
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+        event.preventDefault();
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
       });
-
-      window.history.replaceState(null, "", href);
     });
-  });
 };
 
-/**
- * 初期化
- */
 const initializeSite = () => {
   ensureViewport();
   createHeader();
   createFooter();
   initializeMenu();
   initializeSlider();
+  initializeImageModal();
   initializeImageErrorHandling();
   initializeAnchorNavigation();
 };

@@ -4,10 +4,13 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
   <meta
     name="description"
-    content="5人組アイドルグループ・放課後アンサンブルの公式サイト。最新ニュース、リリース、イベント情報を掲載しています。"
+    content="5人組アイドルグループ・放課後アンサンブルの公式サイト。ニュース、リリース、イベント情報を掲載しています。"
   >
   <title>放課後アンサンブル｜公式サイト</title>
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -15,12 +18,16 @@
 </head>
 
 <body data-page="home">
+  <a class="skip-link" href="#main-content">
+    本文へ移動
+  </a>
+
   <div data-site-header></div>
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     <section
       class="hero-slider"
-      aria-label="注目情報"
+      aria-label="メインビジュアル"
       aria-roledescription="カルーセル"
       data-slider
     >
@@ -32,16 +39,20 @@
           >
             <img
               class="hero-slide__image"
-              src="./assets/images/slides/debut-single.webp"
+              src="./assets/images/slides/debut-single.png"
               alt="夕暮れの教室に立つ放課後アンサンブルの5人"
+              width="1600"
+              height="1200"
             >
             <div class="hero-slide__overlay"></div>
             <div class="hero-slide__content">
-              <span class="hero-slide__label">DEBUT SINGLE</span>
+              <span class="hero-slide__label">
+                DEBUT SINGLE
+              </span>
               <h1>チャイムが<br>鳴る前に</h1>
               <p>
-                待っているだけの放課後を、今日で終わらせよう。
-                デビューシングル予約受付開始。
+                待っているだけの放課後を、
+                今日で終わらせよう。
               </p>
             </div>
           </a>
@@ -54,16 +65,19 @@
           >
             <img
               class="hero-slide__image"
-              src="./assets/images/slides/debut-live.webp"
+              src="./assets/images/slides/debut-live.png"
               alt="体育館ステージでパフォーマンスする5人"
+              width="1600"
+              height="1200"
             >
             <div class="hero-slide__overlay"></div>
             <div class="hero-slide__content">
-              <span class="hero-slide__label">FIRST LIVE</span>
+              <span class="hero-slide__label">
+                FIRST LIVE
+              </span>
               <h2>はじめての<br>ホームルーム</h2>
               <p>
                 放課後アンサンブル初の単独ライブ。
-                チケット先行受付に関する情報を公開しました。
               </p>
             </div>
           </a>
@@ -76,16 +90,19 @@
           >
             <img
               class="hero-slide__image"
-              src="./assets/images/slides/official-launch.webp"
+              src="./assets/images/slides/official-launch.png"
               alt="教室で自然に集まる5人の公式グループ写真"
+              width="1600"
+              height="1200"
             >
             <div class="hero-slide__overlay"></div>
             <div class="hero-slide__content">
-              <span class="hero-slide__label">OFFICIAL PROFILE</span>
+              <span class="hero-slide__label">
+                OFFICIAL PROFILE
+              </span>
               <h2>5人の<br>放課後が始まる</h2>
               <p>
-                個性の異なる5人の公式プロフィールと
-                メンバービジュアルを公開しました。
+                個性の異なる5人のプロフィールを公開。
               </p>
             </div>
           </a>
@@ -114,15 +131,63 @@
       <div class="site-container">
         <div class="section-heading">
           <div>
-            <span class="section-heading__eyebrow">Latest News</span>
+            <span class="section-heading__eyebrow">
+              News
+            </span>
             <h2>ニュース</h2>
           </div>
           <p>
-            リリース、出演、イベントに関する最新情報をお届けします。
+            リリース、出演、イベントに関する情報を
+            新しい順に掲載します。
           </p>
         </div>
 
         <div class="news-list">
+          <a class="news-item" href="./media.html">
+            <time datetime="2027-12-01">2027.12.01</time>
+            <span class="news-item__category">RELEASE</span>
+            <span class="news-item__title">
+              6thシングル「雪の交差点」作品情報公開
+            </span>
+            <span class="news-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="news-item" href="./media.html">
+            <time datetime="2027-10-01">2027.10.01</time>
+            <span class="news-item__category">RELEASE</span>
+            <span class="news-item__title">
+              5thシングル「耳まで恋してる！」作品情報公開
+            </span>
+            <span class="news-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="news-item" href="./media.html">
+            <time datetime="2027-09-01">2027.09.01</time>
+            <span class="news-item__category">RELEASE</span>
+            <span class="news-item__title">
+              4thシングル「台本どおりじゃない恋」作品情報公開
+            </span>
+            <span class="news-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="news-item" href="./media.html">
+            <time datetime="2027-07-01">2027.07.01</time>
+            <span class="news-item__category">RELEASE</span>
+            <span class="news-item__title">
+              3rdシングル「こっち見て、サマー！」作品情報公開
+            </span>
+            <span class="news-item__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a class="news-item" href="./media/kimi-made-todoke.html">
+            <time datetime="2027-05-01">2027.05.01</time>
+            <span class="news-item__category">RELEASE</span>
+            <span class="news-item__title">
+              2ndシングル「君まで届け！」作品情報公開
+            </span>
+            <span class="news-item__arrow" aria-hidden="true">→</span>
+          </a>
+
           <a class="news-item" href="./media/chime-before-it-rings.html">
             <time datetime="2026-09-01">2026.09.01</time>
             <span class="news-item__category">RELEASE</span>
@@ -136,7 +201,7 @@
             <time datetime="2026-08-28">2026.08.28</time>
             <span class="news-item__category">EVENT</span>
             <span class="news-item__title">
-              初単独ライブ「はじめてのホームルーム」開催決定
+              初単独ライブ「はじめてのホームルーム」情報公開
             </span>
             <span class="news-item__arrow" aria-hidden="true">→</span>
           </a>
@@ -154,7 +219,7 @@
             <time datetime="2026-08-15">2026.08.15</time>
             <span class="news-item__category">MEMBER</span>
             <span class="news-item__title">
-              放課後アンサンブルのメンバープロフィールを公開
+              メンバープロフィールを公開
             </span>
             <span class="news-item__arrow" aria-hidden="true">→</span>
           </a>
@@ -172,13 +237,14 @@
         </div>
 
         <div class="home-concept__body">
-          <span class="section-heading__eyebrow">Our Concept</span>
+          <span class="section-heading__eyebrow">
+            Our Concept
+          </span>
           <h2>
             どこか身近で、<br>
             だからこそ特別な5人。
           </h2>
           <p>
-            教室の窓際、体育館の入口、放課後の廊下。
             どこにでもありそうな日常の中から集まった、
             性格も歩幅も違う5人組です。
           </p>
@@ -189,66 +255,6 @@
           <a class="button button--coral" href="./members.html">
             メンバーを見る
           </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="site-container">
-        <div class="section-heading">
-          <div>
-            <span class="section-heading__eyebrow">Featured</span>
-            <h2>注目コンテンツ</h2>
-          </div>
-        </div>
-
-        <div class="media-grid">
-          <article class="content-card">
-            <a href="./media/chime-before-it-rings.html">
-              <div class="content-card__image">
-                <img
-                  src="./assets/images/media/debut-single-cover.webp"
-                  alt="チャイムが鳴る前にのジャケット写真"
-                  loading="lazy"
-                >
-                <span class="content-card__badge">NEW RELEASE</span>
-              </div>
-              <div class="content-card__body">
-                <div class="content-card__meta">
-                  <span>2026.10.14 RELEASE</span>
-                  <span>DEBUT SINGLE</span>
-                </div>
-                <h2>チャイムが鳴る前に</h2>
-                <p>
-                  平凡な今日を、自分たちの手で特別に変える
-                  青春ポップロック。
-                </p>
-              </div>
-            </a>
-          </article>
-
-          <article class="content-card">
-            <a href="./events/debut-live.html">
-              <div class="content-card__image">
-                <img
-                  src="./assets/images/events/debut-live-main.webp"
-                  alt="初単独ライブの告知ビジュアル"
-                  loading="lazy"
-                >
-                <span class="content-card__badge">UPCOMING</span>
-              </div>
-              <div class="content-card__body">
-                <div class="content-card__meta">
-                  <span>2026.11.08</span>
-                  <span>FIRST LIVE</span>
-                </div>
-                <h2>はじめてのホームルーム</h2>
-                <p>
-                  放課後アンサンブル初の単独ライブを開催します。
-                </p>
-              </div>
-            </a>
-          </article>
         </div>
       </div>
     </section>

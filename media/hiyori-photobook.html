@@ -4,7 +4,10 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
   <meta
     name="description"
     content="桜庭ひよりファースト写真集「春のとなり」。"
@@ -15,14 +18,20 @@
 </head>
 
 <body data-page="media">
+  <a class="skip-link" href="#main-content">
+    本文へ移動
+  </a>
+
   <div data-site-header></div>
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     <section class="detail-hero">
       <img
         class="detail-hero__image"
-        src="../assets/images/media/hiyori-photobook-cover.webp"
+        src="../assets/images/media/hiyori-photobook/cover.png"
         alt="桜庭ひよりファースト写真集「春のとなり」の表紙"
+        width="1600"
+        height="1200"
       >
       <div class="detail-hero__shade"></div>
 
@@ -44,7 +53,7 @@
           <h2>作品紹介</h2>
           <p>
             朝の部屋、静かな海辺、夕暮れの街。
-            明るい王道センターとしての姿だけでなく、
+            王道センターとしての姿だけでなく、
             一人の21歳として過ごす穏やかな時間を写し出します。
           </p>
 
@@ -72,8 +81,10 @@
           <div class="gallery-grid">
             <figure>
               <img
-                src="../assets/images/media/hiyori-photobook-cover.webp"
+                src="../assets/images/media/hiyori-photobook/cover.png"
                 alt="写真集のメインビジュアル"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
               <figcaption>
@@ -83,8 +94,10 @@
 
             <figure>
               <img
-                src="../assets/images/media/hiyori-photobook-01.webp"
+                src="../assets/images/media/hiyori-photobook/preview-01.png"
                 alt="自然光の中で微笑む桜庭ひより"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
               <figcaption>
@@ -94,8 +107,10 @@
 
             <figure>
               <img
-                src="../assets/images/media/hiyori-photobook-02.webp"
+                src="../assets/images/media/hiyori-photobook/preview-02.png"
                 alt="海辺に立つ桜庭ひより"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
               <figcaption>
@@ -108,7 +123,7 @@
         <aside class="detail-sidebar">
           <dl>
             <div>
-              <dt>発売予定日</dt>
+              <dt>発売日</dt>
               <dd>2027年4月12日</dd>
             </div>
             <div>
@@ -125,10 +140,7 @@
             </div>
           </dl>
 
-          <a
-            class="button button--coral"
-            href="../maintenance.html"
-          >
+          <a class="button button--coral" href="../maintenance.html">
             購入ページへ
           </a>
         </aside>

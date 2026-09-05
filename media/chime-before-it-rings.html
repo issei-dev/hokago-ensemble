@@ -4,7 +4,10 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
   <meta
     name="description"
     content="放課後アンサンブルのデビューシングル「チャイムが鳴る前に」。"
@@ -15,14 +18,20 @@
 </head>
 
 <body data-page="media">
+  <a class="skip-link" href="#main-content">
+    本文へ移動
+  </a>
+
   <div data-site-header></div>
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     <section class="detail-hero">
       <img
         class="detail-hero__image"
-        src="../assets/images/media/debut-single-cover.PNG"
+        src="../assets/images/media/debut-single/jacket.png"
         alt="チャイムが鳴る前にのジャケットビジュアル"
+        width="1600"
+        height="1200"
       >
       <div class="detail-hero__shade"></div>
 
@@ -43,7 +52,6 @@
         <div class="detail-content">
           <h2>作品紹介</h2>
           <p>
-            教室の時計、廊下に響く足音、夕暮れの屋上。
             何でもない日常が、最初の一歩によって
             物語へ変わる瞬間を描いた青春ポップロックです。
           </p>
@@ -56,11 +64,11 @@
             </li>
             <li>
               <strong>五人目の席</strong>
-              <span>4:16</span>
+              <span>4:16／カップリング曲</span>
             </li>
             <li>
               <strong>全力ホームルーム！</strong>
-              <span>3:35</span>
+              <span>3:35／カップリング曲</span>
             </li>
             <li>
               <strong>チャイムが鳴る前に Instrumental</strong>
@@ -70,10 +78,12 @@
 
           <h2>ミュージックビデオ</h2>
           <div class="gallery-grid">
-            <figure class="gallery-grid__square">
+            <figure>
               <img
-                src="../assets/images/media/debut-single-mv-01.PNG"
+                src="../assets/images/media/debut-single/mv-01.png"
                 alt="教室で歌う5人のMVカット"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
               <figcaption>
@@ -81,10 +91,12 @@
               </figcaption>
             </figure>
 
-            <figure class="gallery-grid__square">
+            <figure>
               <img
-                src="../assets/images/media/debut-single-mv-02.PNG"
-                alt="体育館でダンスする5人のMVカット"
+                src="../assets/images/media/debut-single/mv-02.png"
+                alt="体育館で踊る5人のMVカット"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
               <figcaption>
@@ -92,15 +104,105 @@
               </figcaption>
             </figure>
 
-            <figure class="gallery-grid__square">
+            <figure>
               <img
-                src="../assets/images/media/debut-single-mv-03.PNG"
+                src="../assets/images/media/debut-single/mv-03.png"
                 alt="夕暮れの屋上に立つ5人のMVカット"
+                width="1600"
+                height="1200"
                 loading="lazy"
               >
               <figcaption>
                 夕暮れの屋上で迎えるクライマックス
               </figcaption>
+            </figure>
+          </div>
+
+          <h2>メンバー衣装</h2>
+          <div class="costume-grid">
+            <figure class="costume-card">
+              <button
+                class="costume-card__button"
+                type="button"
+                aria-label="桜庭ひよりの衣装写真を拡大"
+              >
+                <img
+                  src="../assets/images/media/debut-single/costumes/hiyori.png"
+                  alt="桜庭ひよりのチャイムが鳴る前に衣装"
+                  data-modal-image
+                  data-modal-caption="桜庭ひより"
+                  loading="lazy"
+                >
+              </button>
+              <figcaption>桜庭ひより</figcaption>
+            </figure>
+
+            <figure class="costume-card">
+              <button
+                class="costume-card__button"
+                type="button"
+                aria-label="水瀬つむぎの衣装写真を拡大"
+              >
+                <img
+                  src="../assets/images/media/debut-single/costumes/tsumugi.png"
+                  alt="水瀬つむぎのチャイムが鳴る前に衣装"
+                  data-modal-image
+                  data-modal-caption="水瀬つむぎ"
+                  loading="lazy"
+                >
+              </button>
+              <figcaption>水瀬つむぎ</figcaption>
+            </figure>
+
+            <figure class="costume-card">
+              <button
+                class="costume-card__button"
+                type="button"
+                aria-label="日向こはるの衣装写真を拡大"
+              >
+                <img
+                  src="../assets/images/media/debut-single/costumes/koharu.png"
+                  alt="日向こはるのチャイムが鳴る前に衣装"
+                  data-modal-image
+                  data-modal-caption="日向こはる"
+                  loading="lazy"
+                >
+              </button>
+              <figcaption>日向こはる</figcaption>
+            </figure>
+
+            <figure class="costume-card">
+              <button
+                class="costume-card__button"
+                type="button"
+                aria-label="白石れいなの衣装写真を拡大"
+              >
+                <img
+                  src="../assets/images/media/debut-single/costumes/reina.png"
+                  alt="白石れいなのチャイムが鳴る前に衣装"
+                  data-modal-image
+                  data-modal-caption="白石れいな"
+                  loading="lazy"
+                >
+              </button>
+              <figcaption>白石れいな</figcaption>
+            </figure>
+
+            <figure class="costume-card">
+              <button
+                class="costume-card__button"
+                type="button"
+                aria-label="橘まどかの衣装写真を拡大"
+              >
+                <img
+                  src="../assets/images/media/debut-single/costumes/madoka.png"
+                  alt="橘まどかのチャイムが鳴る前に衣装"
+                  data-modal-image
+                  data-modal-caption="橘まどか"
+                  loading="lazy"
+                >
+              </button>
+              <figcaption>橘まどか</figcaption>
             </figure>
           </div>
         </div>
@@ -125,10 +227,7 @@
             </div>
           </dl>
 
-          <a
-            class="button button--coral"
-            href="../maintenance.html"
-          >
+          <a class="button button--coral" href="../maintenance.html">
             購入ページへ
           </a>
         </aside>

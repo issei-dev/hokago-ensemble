@@ -1,0 +1,905 @@
+<!-- Output: html -->
+<!-- File: hokaan.html -->
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  >
+  <meta
+    name="description"
+    content="放課後アンサンブルのメンバーとファンのツーショット、オフショット、普段の様子を掲載する公式フォトギャラリー「#ほかアン」。"
+  >
+  <meta name="theme-color" content="#fffdf8">
+
+  <title>#ほかアン｜放課後アンサンブル</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script
+    src="./assets/js/site.js"
+    data-base="."
+    defer
+  ></script>
+</head>
+
+<body data-page="hokaan">
+  <a class="skip-link" href="#main-content">
+    本文へ移動
+  </a>
+
+  <div data-site-header></div>
+
+  <main id="main-content" class="site-main">
+    <header class="page-header">
+      <div class="site-container">
+        <span class="page-header__eyebrow">
+          #HOKAAN
+        </span>
+
+        <h1>#ほかアン</h1>
+
+        <p>
+          ファンの皆さんとのツーショットや、
+          ステージの外で過ごす5人の自然な表情をお届けします。
+          メンバーを選ぶと、写真を絞り込んで見ることができます。
+        </p>
+      </div>
+    </header>
+
+    <section
+      class="section hokaan-section"
+      aria-labelledby="hokaan-gallery-title"
+    >
+      <div class="site-container">
+        <div class="section-heading hokaan-heading">
+          <div>
+            <span class="section-heading__eyebrow">
+              Photo Gallery
+            </span>
+
+            <h2 id="hokaan-gallery-title">
+              フォトギャラリー
+            </h2>
+          </div>
+
+          <p>
+            写真を選択すると拡大表示できます。
+          </p>
+        </div>
+
+        <div
+          class="hokaan-filter"
+          role="group"
+          aria-label="メンバーで写真を絞り込む"
+          data-hokaan-filter
+        >
+          <button
+            class="hokaan-filter__button is-active"
+            type="button"
+            data-filter="all"
+            aria-pressed="true"
+          >
+            すべて
+            <span>25</span>
+          </button>
+
+          <button
+            class="hokaan-filter__button"
+            type="button"
+            data-filter="hiyori"
+            aria-pressed="false"
+          >
+            <i
+              class="hokaan-filter__color"
+              style="--filter-color: #ef7f79;"
+              aria-hidden="true"
+            ></i>
+            桜庭ひより
+            <span>5</span>
+          </button>
+
+          <button
+            class="hokaan-filter__button"
+            type="button"
+            data-filter="tsumugi"
+            aria-pressed="false"
+          >
+            <i
+              class="hokaan-filter__color"
+              style="--filter-color: #73bdd0;"
+              aria-hidden="true"
+            ></i>
+            水瀬つむぎ
+            <span>5</span>
+          </button>
+
+          <button
+            class="hokaan-filter__button"
+            type="button"
+            data-filter="koharu"
+            aria-pressed="false"
+          >
+            <i
+              class="hokaan-filter__color"
+              style="--filter-color: #edc74a;"
+              aria-hidden="true"
+            ></i>
+            日向こはる
+            <span>5</span>
+          </button>
+
+          <button
+            class="hokaan-filter__button"
+            type="button"
+            data-filter="reina"
+            aria-pressed="false"
+          >
+            <i
+              class="hokaan-filter__color"
+              style="--filter-color: #9277b8;"
+              aria-hidden="true"
+            ></i>
+            白石れいな
+            <span>5</span>
+          </button>
+
+          <button
+            class="hokaan-filter__button"
+            type="button"
+            data-filter="madoka"
+            aria-pressed="false"
+          >
+            <i
+              class="hokaan-filter__color"
+              style="--filter-color: #72af80;"
+              aria-hidden="true"
+            ></i>
+            橘まどか
+            <span>5</span>
+          </button>
+        </div>
+
+        <div class="hokaan-result" aria-live="polite">
+          <p data-filter-result>
+            25枚の写真を表示しています
+          </p>
+        </div>
+
+        <div class="hokaan-grid" data-hokaan-grid>
+          <article
+            class="hokaan-card"
+            data-member="hiyori"
+            style="--member-color: #ef7f79;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="桜庭ひよりとファンのツーショットを拡大"
+            >
+              <img
+                src="./assets/images/hokaan/hiyori-01.png"
+                alt="桜庭ひよりとファンのイベントツーショット"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="桜庭ひより／ファンイベントのツーショット"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                桜庭ひより
+              </span>
+              <p>ファンイベントのツーショット</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="tsumugi"
+            style="--member-color: #73bdd0;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="水瀬つむぎの読書中の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/tsumugi-01.png"
+                alt="控室で本を読む水瀬つむぎ"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="水瀬つむぎ／本番前の読書時間"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                水瀬つむぎ
+              </span>
+              <p>本番前の読書時間</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="koharu"
+            style="--member-color: #edc74a;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="日向こはるのダンス練習風景を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/koharu-01.png"
+                alt="レッスンスタジオでダンスを練習する日向こはる"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="日向こはる／ダンスレッスン"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                日向こはる
+              </span>
+              <p>ダンスレッスン</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="reina"
+            style="--member-color: #9277b8;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="白石れいなの撮影準備中の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/reina-01.png"
+                alt="撮影前にカメラを確認する白石れいな"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="白石れいな／撮影前のカメラチェック"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                白石れいな
+              </span>
+              <p>撮影前のカメラチェック</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="madoka"
+            style="--member-color: #72af80;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="橘まどかの収録前の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/madoka-01.png"
+                alt="収録前にマイクを持って話す橘まどか"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="橘まどか／収録前のマイクテスト"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                橘まどか
+              </span>
+              <p>収録前のマイクテスト</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="hiyori"
+            style="--member-color: #ef7f79;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="桜庭ひよりのカフェでの写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/hiyori-02.png"
+                alt="カフェでドリンクを持って微笑む桜庭ひより"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="桜庭ひより／撮影後のカフェ休憩"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                桜庭ひより
+              </span>
+              <p>撮影後のカフェ休憩</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="tsumugi"
+            style="--member-color: #73bdd0;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="水瀬つむぎとファンのツーショットを拡大"
+            >
+              <img
+                src="./assets/images/hokaan/tsumugi-02.png"
+                alt="水瀬つむぎとファンのイベントツーショット"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="水瀬つむぎ／ファンイベントのツーショット"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                水瀬つむぎ
+              </span>
+              <p>ファンイベントのツーショット</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="koharu"
+            style="--member-color: #edc74a;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="日向こはるとファンのツーショットを拡大"
+            >
+              <img
+                src="./assets/images/hokaan/koharu-02.png"
+                alt="日向こはるとファンのイベントツーショット"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="日向こはる／ファンイベントのツーショット"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                日向こはる
+              </span>
+              <p>ファンイベントのツーショット</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="reina"
+            style="--member-color: #9277b8;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="白石れいなの美術館での写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/reina-02.png"
+                alt="美術館の展示を眺める白石れいな"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="白石れいな／休日の美術館"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                白石れいな
+              </span>
+              <p>休日の美術館</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="madoka"
+            style="--member-color: #72af80;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="橘まどかとファンのツーショットを拡大"
+            >
+              <img
+                src="./assets/images/hokaan/madoka-02.png"
+                alt="橘まどかとファンのイベントツーショット"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="橘まどか／ファンイベントのツーショット"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                橘まどか
+              </span>
+              <p>ファンイベントのツーショット</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="hiyori"
+            style="--member-color: #ef7f79;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="桜庭ひよりの手帳を飾る写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/hiyori-03.png"
+                alt="控室で手帳をデコレーションする桜庭ひより"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="桜庭ひより／控室で手帳をデコレーション"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                桜庭ひより
+              </span>
+              <p>控室で手帳をデコレーション</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="tsumugi"
+            style="--member-color: #73bdd0;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="水瀬つむぎの喫茶店での写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/tsumugi-03.png"
+                alt="レトロな喫茶店で過ごす水瀬つむぎ"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="水瀬つむぎ／休日の喫茶店"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                水瀬つむぎ
+              </span>
+              <p>休日の喫茶店</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="koharu"
+            style="--member-color: #edc74a;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="日向こはるの駄菓子屋での写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/koharu-03.png"
+                alt="駄菓子を選ぶ日向こはる"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="日向こはる／駄菓子屋でお買い物"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                日向こはる
+              </span>
+              <p>駄菓子屋でお買い物</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="reina"
+            style="--member-color: #9277b8;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="白石れいなとファンのツーショットを拡大"
+            >
+              <img
+                src="./assets/images/hokaan/reina-03.png"
+                alt="白石れいなとファンのイベントツーショット"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="白石れいな／ファンイベントのツーショット"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                白石れいな
+              </span>
+              <p>ファンイベントのツーショット</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="madoka"
+            style="--member-color: #72af80;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="橘まどかの料理中の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/madoka-03.png"
+                alt="キッチンで料理をする橘まどか"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="橘まどか／料理企画の準備中"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                橘まどか
+              </span>
+              <p>料理企画の準備中</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="hiyori"
+            style="--member-color: #ef7f79;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="桜庭ひよりの舞台袖での写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/hiyori-04.png"
+                alt="ライブ前の舞台袖で笑顔を見せる桜庭ひより"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="桜庭ひより／ライブ直前の舞台袖"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                桜庭ひより
+              </span>
+              <p>ライブ直前の舞台袖</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="tsumugi"
+            style="--member-color: #73bdd0;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="水瀬つむぎの打ち合わせ中の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/tsumugi-04.png"
+                alt="ノートを見ながら打ち合わせをする水瀬つむぎ"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="水瀬つむぎ／ライブ構成の打ち合わせ"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                水瀬つむぎ
+              </span>
+              <p>ライブ構成の打ち合わせ</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="koharu"
+            style="--member-color: #edc74a;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="日向こはるの本番直後の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/koharu-04.png"
+                alt="ライブ本番後にタオルを持って笑う日向こはる"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="日向こはる／ライブを終えた直後"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                日向こはる
+              </span>
+              <p>ライブを終えた直後</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="reina"
+            style="--member-color: #9277b8;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="白石れいなの衣装補修中の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/reina-04.png"
+                alt="控室で衣装を補修する白石れいな"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="白石れいな／本番前の衣装補修"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                白石れいな
+              </span>
+              <p>本番前の衣装補修</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="madoka"
+            style="--member-color: #72af80;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="橘まどかのラジオ収録中の写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/madoka-04.png"
+                alt="ラジオブースで話す橘まどか"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="橘まどか／ラジオ収録"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                橘まどか
+              </span>
+              <p>ラジオ収録</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="hiyori"
+            style="--member-color: #ef7f79;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="桜庭ひよりとファンの記念写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/hiyori-05.png"
+                alt="桜庭ひよりとファンの季節イベント記念写真"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="桜庭ひより／季節イベントの記念写真"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                桜庭ひより
+              </span>
+              <p>季節イベントの記念写真</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="tsumugi"
+            style="--member-color: #73bdd0;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="水瀬つむぎとファンの記念写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/tsumugi-05.png"
+                alt="水瀬つむぎとファンの季節イベント記念写真"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="水瀬つむぎ／季節イベントの記念写真"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                水瀬つむぎ
+              </span>
+              <p>季節イベントの記念写真</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="koharu"
+            style="--member-color: #edc74a;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="日向こはるとファンの記念写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/koharu-05.png"
+                alt="日向こはるとファンの季節イベント記念写真"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="日向こはる／季節イベントの記念写真"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                日向こはる
+              </span>
+              <p>季節イベントの記念写真</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="reina"
+            style="--member-color: #9277b8;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="白石れいなとファンの記念写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/reina-05.png"
+                alt="白石れいなとファンの季節イベント記念写真"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="白石れいな／季節イベントの記念写真"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                白石れいな
+              </span>
+              <p>季節イベントの記念写真</p>
+            </div>
+          </article>
+
+          <article
+            class="hokaan-card"
+            data-member="madoka"
+            style="--member-color: #72af80;"
+          >
+            <button
+              class="hokaan-card__button"
+              type="button"
+              aria-label="橘まどかとファンの記念写真を拡大"
+            >
+              <img
+                src="./assets/images/hokaan/madoka-05.png"
+                alt="橘まどかとファンの季節イベント記念写真"
+                width="1600"
+                height="1200"
+                data-modal-image
+                data-modal-caption="橘まどか／季節イベントの記念写真"
+                loading="lazy"
+              >
+            </button>
+
+            <div class="hokaan-card__body">
+              <span class="hokaan-card__member">
+                橘まどか
+              </span>
+              <p>季節イベントの記念写真</p>
+            </div>
+          </article>
+        </div>
+
+        <noscript>
+          <p class="hokaan-noscript">
+            メンバーによる絞り込みにはJavaScriptが必要です。
+            JavaScriptが無効の場合も、25枚の写真はすべて表示されます。
+          </p>
+        </noscript>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+</body>
+</html>

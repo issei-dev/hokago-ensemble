@@ -30,6 +30,11 @@ const navigationItems = [
     key: "events",
     label: "イベント",
     href: `${basePath}/events.html`
+  },
+  {
+    key: "hokaan",
+    label: "#ほかアン",
+    href: `${basePath}/hokaan.html`
   }
 ];
 

@@ -502,5 +502,116 @@ const initializeSite = () => {
   initializeImageErrorHandling();
   initializeAnchorNavigation();
 };
+// File: assets/js/site.js
+
+/**
+ * 「#ほかアン」のメンバー別フィルターを制御します。
+ */
+const initializeHokaanFilter = () => {
+  const filterContainer = document.querySelector(
+    "[data-hokaan-filter]"
+  );
+
+  const gallery = document.querySelector(
+    "[data-hokaan-grid]"
+  );
+
+  if (!filterContainer || !gallery) {
+    return;
+  }
+
+  const buttons = Array.from(
+    filterContainer.querySelectorAll("[data-filter]")
+  );
+
+  const cards = Array.from(
+    gallery.querySelectorAll("[data-member]")
+  );
+
+  const result = document.querySelector(
+    "[data-filter-result]"
+  );
+
+  const memberNames = {
+    all: "すべて",
+    hiyori: "桜庭ひより",
+    tsumugi: "水瀬つむぎ",
+    koharu: "日向こはる",
+    reina: "白石れいな",
+    madoka: "橘まどか"
+  };
+
+  const updateResult = (filter, visibleCount) => {
+    if (!result) {
+      return;
+    }
+
+    if (filter === "all") {
+      result.textContent =
+        `${visibleCount}枚の写真を表示しています`;
+
+      return;
+    }
+
+    result.textContent =
+      `${memberNames[filter]}の写真を` +
+      `${visibleCount}枚表示しています`;
+  };
+
+  const applyFilter = (filter) => {
+    let visibleCount = 0;
+
+    buttons.forEach((button) => {
+      const isActive =
+        button.dataset.filter === filter;
+
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute(
+        "aria-pressed",
+        String(isActive)
+      );
+    });
+
+    cards.forEach((card) => {
+      const shouldShow =
+        filter === "all" ||
+        card.dataset.member === filter;
+
+      card.hidden = !shouldShow;
+
+      if (shouldShow) {
+        visibleCount += 1;
+      }
+    });
+
+    updateResult(filter, visibleCount);
+  };
+
+  filterContainer.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-filter]");
+
+    if (!button) {
+      return;
+    }
+
+    applyFilter(button.dataset.filter || "all");
+  });
+
+  applyFilter("all");
+};
+initializeSite();
+// File: assets/js/site.js
+
+const initializeSite = () => {
+  ensureViewport();
+  createHeader();
+  createFooter();
+  initializeMenu();
+  initializeSlider();
+  initializeImageModal();
+  initializeImageErrorHandling();
+  initializeAnchorNavigation();
+  initializeHokaanFilter();
+};
 
 initializeSite();

@@ -107,7 +107,7 @@ const createHeader = () => {
         >
           <img
             class="site-logo__image"
-            src="${basePath}/assets/images/common/header-logo.png"
+            src="${basePath}/assets/images/common/header-logo.JPG"
             alt="放課後アンサンブル"
             width="80"
             height="60"
@@ -175,7 +175,7 @@ const createFooter = () => {
               aria-label="放課後アンサンブル トップページへ戻る"
             >
               <img
-                src="${basePath}/assets/images/common/header-logo.png"
+                src="${basePath}/assets/images/common/header-logo.JPG"
                 alt="放課後アンサンブル"
                 width="160"
                 height="120"

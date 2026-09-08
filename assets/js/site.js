@@ -22,6 +22,8 @@ const basePath = getBasePath();
 /**
  * 共通ナビゲーションの項目を定義します。
  */
+// File: assets/js/site.js
+
 const navigationItems = [
   {
     key: "home",
@@ -37,6 +39,11 @@ const navigationItems = [
     key: "media",
     label: "メディア",
     href: `${basePath}/media.html`
+  },
+  {
+    key: "graffiti",
+    label: "グラフィティ",
+    href: `${basePath}/graffiti.html`
   },
   {
     key: "events",

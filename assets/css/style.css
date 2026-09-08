@@ -1684,3 +1684,337 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+/* File: assets/css/style.css */
+
+/* =========================================================
+   Graffiti list
+   ========================================================= */
+
+.graffiti-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 26px;
+}
+
+.graffiti-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 16px;
+  background: var(--color-white);
+  box-shadow: 0 16px 36px var(--color-shadow);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.graffiti-card:hover {
+  box-shadow: 0 22px 46px rgba(33, 54, 83, 0.17);
+  transform: translateY(-4px);
+}
+
+.graffiti-card__image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: #e8edf2;
+}
+
+.graffiti-card__image img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 500ms ease;
+}
+
+.graffiti-card:hover .graffiti-card__image img {
+  transform: scale(1.025);
+}
+
+.graffiti-card__badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 6px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  color: var(--color-white);
+  background: rgba(20, 37, 60, 0.82);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.graffiti-card__body {
+  min-width: 0;
+  padding: 21px 18px 24px;
+}
+
+.graffiti-card__meta {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 7px 14px;
+  color: var(--color-muted);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.graffiti-card h2 {
+  margin: 0 0 11px;
+  color: var(--color-navy);
+  font-size: 21px;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+.graffiti-card p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   Publication detail header
+   ========================================================= */
+
+.publication-header {
+  position: relative;
+  overflow: hidden;
+  padding-block: 46px;
+  border-bottom: 1px solid var(--color-line);
+  background:
+    radial-gradient(
+      circle at 94% 8%,
+      rgba(146, 119, 184, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 7% 92%,
+      rgba(239, 127, 121, 0.22),
+      transparent 30%
+    ),
+    var(--color-white);
+}
+
+.publication-header__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.publication-header__cover {
+  width: min(100%, 390px);
+  margin: 0 auto;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  border: 7px solid var(--color-white);
+  border-radius: 7px;
+  background: #e8edf2;
+  box-shadow: 0 24px 60px rgba(33, 54, 83, 0.2);
+}
+
+.publication-header__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.publication-header__category {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 13px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  color: var(--color-white);
+  background: var(--color-navy);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.publication-header__person {
+  margin: 0 0 7px;
+  color: var(--color-coral-dark);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.publication-header h1 {
+  margin: 0;
+  color: var(--color-navy);
+  font-size: clamp(38px, 11vw, 68px);
+  font-weight: 950;
+  letter-spacing: -0.055em;
+  line-height: 1.1;
+}
+
+.publication-header__lead {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: var(--color-muted);
+  line-height: 1.9;
+}
+
+/* =========================================================
+   Publication detail content
+   ========================================================= */
+
+.publication-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 38px;
+}
+
+.publication-content {
+  min-width: 0;
+}
+
+.publication-content h2 {
+  margin: 48px 0 18px;
+  color: var(--color-navy);
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.publication-content h2:first-child {
+  margin-top: 0;
+}
+
+.publication-content p {
+  color: var(--color-muted);
+}
+
+.publication-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 18px;
+}
+
+.publication-gallery figure {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  background: var(--color-white);
+  box-shadow: 0 12px 28px var(--color-shadow);
+}
+
+.publication-gallery__button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: #e8edf2;
+  cursor: zoom-in;
+}
+
+.publication-gallery--portrait
+.publication-gallery__button {
+  aspect-ratio: 3 / 4;
+}
+
+.publication-gallery--landscape
+.publication-gallery__button {
+  aspect-ratio: 4 / 3;
+}
+
+.publication-gallery__button img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  transition:
+    transform 450ms ease,
+    filter var(--transition);
+}
+
+.publication-gallery__button:hover img {
+  filter: brightness(0.96);
+  transform: scale(1.025);
+}
+
+.publication-gallery figcaption {
+  padding: 11px 13px 13px;
+  color: var(--color-muted);
+  background: var(--color-white);
+  font-size: 12px;
+  font-weight: 750;
+  text-align: center;
+}
+
+/* =========================================================
+   Graffiti tablet
+   ========================================================= */
+
+@media (min-width: 560px) {
+  .graffiti-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .publication-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 700px) {
+  .publication-header {
+    padding-block: 65px;
+  }
+
+  .publication-header__inner {
+    grid-template-columns:
+      minmax(260px, 0.72fr)
+      minmax(0, 1.28fr);
+    gap: 55px;
+  }
+
+  .publication-header__cover {
+    margin: 0;
+  }
+}
+
+/* =========================================================
+   Graffiti desktop
+   ========================================================= */
+
+@media (min-width: 960px) {
+  .graffiti-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .publication-header {
+    padding-block: 80px;
+  }
+
+  .publication-header__inner {
+    grid-template-columns: 390px minmax(0, 1fr);
+    gap: 72px;
+  }
+
+  .publication-layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 50px;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1180px) {
+  .graffiti-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

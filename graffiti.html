@@ -1,24 +1,214 @@
 <!-- Output: html -->
-<a
-  class="news-item"
-  href="./graffiti/hiyori-photobook.html"
->
-  <time datetime="2027-04-12">
-    2027.04.12
-  </time>
-
-  <span class="news-item__category">
-    BOOK
-  </span>
-
-  <span class="news-item__title">
-    桜庭ひより1st写真集「春のとなり」発売
-  </span>
-
-  <span
-    class="news-item__arrow"
-    aria-hidden="true"
+<!-- File: graffiti.html -->
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
   >
-    →
-  </span>
-</a>
+  <meta
+    name="description"
+    content="放課後アンサンブルの写真集、グラビア誌、アイドル誌、青年漫画誌への掲載情報を紹介するグラフィティページ。"
+  >
+  <meta name="theme-color" content="#fffdf8">
+
+  <title>グラフィティ｜放課後アンサンブル</title>
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script
+    src="./assets/js/site.js"
+    data-base="."
+    defer
+  ></script>
+</head>
+
+<body data-page="graffiti">
+  <a class="skip-link" href="#main-content">
+    本文へ移動
+  </a>
+
+  <div data-site-header></div>
+
+  <main id="main-content" class="site-main">
+    <header class="page-header">
+      <div class="site-container">
+        <span class="page-header__eyebrow">
+          Graffiti
+        </span>
+
+        <h1>グラフィティ</h1>
+
+        <p>
+          メンバーの写真集、グラビア特集、
+          インタビュー記事、雑誌掲載情報をご紹介します。
+        </p>
+      </div>
+    </header>
+
+    <section
+      class="section"
+      aria-labelledby="graffiti-list-title"
+    >
+      <div class="site-container">
+        <div class="section-heading">
+          <div>
+            <span class="section-heading__eyebrow">
+              Books & Magazines
+            </span>
+
+            <h2 id="graffiti-list-title">
+              作品・掲載一覧
+            </h2>
+          </div>
+
+          <p>
+            表紙を選択すると、作品や掲載内容の詳細を確認できます。
+          </p>
+        </div>
+
+        <div class="graffiti-grid">
+          <article class="graffiti-card">
+            <a href="./graffiti/hiyori-photobook.html">
+              <div class="graffiti-card__image">
+                <img
+                  src="./assets/images/graffiti/hiyori-photobook/cover.png"
+                  alt="桜庭ひより1st写真集「春のとなり」の表紙"
+                  width="1200"
+                  height="1600"
+                >
+
+                <span class="graffiti-card__badge">
+                  PHOTOBOOK
+                </span>
+              </div>
+
+              <div class="graffiti-card__body">
+                <div class="graffiti-card__meta">
+                  <span>2027.04.12</span>
+                  <span>桜庭ひより</span>
+                </div>
+
+                <h2>
+                  1st写真集「春のとなり」
+                </h2>
+
+                <p>
+                  かわいらしい笑顔から静かな大人っぽさまで、
+                  桜庭ひよりの新しい可能性を収めたファースト写真集。
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article class="graffiti-card">
+            <a href="./graffiti/pureidol-vol01.html">
+              <div class="graffiti-card__image">
+                <img
+                  src="./assets/images/graffiti/pureidol-vol01/cover.png"
+                  alt="グラビア雑誌PureIDOL Vol.01の表紙"
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                >
+
+                <span class="graffiti-card__badge">
+                  GRAVURE
+                </span>
+              </div>
+
+              <div class="graffiti-card__body">
+                <div class="graffiti-card__meta">
+                  <span>PureIDOL Vol.01</span>
+                  <span>桜庭ひより</span>
+                </div>
+
+                <h2>
+                  PureIDOL「夏の余韻」
+                </h2>
+
+                <p>
+                  3rdシングル後の桜庭ひよりを特集した、
+                  爽やかで上品なグラビアストーリー。
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article class="graffiti-card">
+            <a href="./graffiti/idol-scope-vol01.html">
+              <div class="graffiti-card__image">
+                <img
+                  src="./assets/images/graffiti/idol-scope-vol01/cover.png"
+                  alt="アイドル雑誌あいどるすこーぷ Vol.01の表紙"
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                >
+
+                <span class="graffiti-card__badge">
+                  INTERVIEW
+                </span>
+              </div>
+
+              <div class="graffiti-card__body">
+                <div class="graffiti-card__meta">
+                  <span>あいどるすこーぷ Vol.01</span>
+                  <span>5人インタビュー</span>
+                </div>
+
+                <h2>
+                  あいどるすこーぷ「5人の現在地」
+                </h2>
+
+                <p>
+                  放課後アンサンブルの歩みと、
+                  5人が考えるこれからを掘り下げたロングインタビュー。
+                </p>
+              </div>
+            </a>
+          </article>
+
+          <article class="graffiti-card">
+            <a href="./graffiti/young-young-no32.html">
+              <div class="graffiti-card__image">
+                <img
+                  src="./assets/images/graffiti/young-young-no32/cover.png"
+                  alt="週刊ヤングヤング第32号の表紙"
+                  width="1200"
+                  height="1600"
+                  loading="lazy"
+                >
+
+                <span class="graffiti-card__badge">
+                  WEEKLY MAGAZINE
+                </span>
+              </div>
+
+              <div class="graffiti-card__body">
+                <div class="graffiti-card__meta">
+                  <span>週刊ヤングヤング No.32</span>
+                  <span>巻中グラビア</span>
+                </div>
+
+                <h2>
+                  週刊ヤングヤング「放課後の彼女」
+                </h2>
+
+                <p>
+                  桜庭ひよりの親しみやすさと、
+                  ふとした瞬間の大人びた表情を収めた巻中特集。
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-site-footer></div>
+</body>
+</html>
